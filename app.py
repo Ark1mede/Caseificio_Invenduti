@@ -8,10 +8,10 @@ col1, col2 = st.columns(2)
 # Slider nelle due colonne
 with col1:
     costo_mozzarella = st.slider("Costo di produzione (€/0.5kg)", 5.0, 15.0, 8.0, step=0.5)  # Costo per 0.5 kg
-    costo_consegna = st.slider("Costo di consegna (€)", 0, 10, 5)
+    costo_consegna = st.slider("Costo di consegna (€)", 0.0, 10.0, 5.0, step=0.5 )
 with col2:
-    prezzo_vendita = st.slider("Prezzo di vendita (€/0.5kg)", 10, 20, 13)  # Prezzo per 0.5 kg
-    quantita_venduta = st.slider("Quantità venduta per consegna (0.5kg)", 1, 20, 6)  # Quantità in 0.5 kg
+    prezzo_vendita = st.slider("Prezzo di vendita (€/0.5kg)", 10.0, 20.0, 13.0, step=0.5)  # Prezzo per 0.5 kg
+    quantita_venduta = st.slider("Quantità venduta per consegna (0.5kg)", 1.0, 20.0, 6.0, step=0.5)  # Quantità in 0.5 kg
 
 numero_consegne = st.slider("Numero di consegne", 1, 20, 10)
 percentuale_invenduto = st.slider("Percentuale di invenduto (%)", 0, 100, 10)
