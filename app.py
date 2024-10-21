@@ -53,7 +53,7 @@ guadagni_dopo_invenduto += [-10 * i for i in range(1, 11)]  # Aggiungi 10 valori
 
 # Crea il grafico
 plt.figure(figsize=(10, 5))
-plt.plot(quantita_range, guadagni_dopo_invenduto[:20], marker='o')  # Usa solo i primi 40 valori
+plt.plot(quantita_range, guadagni_dopo_invenduto[:40], marker='o')  # Usa solo i primi 40 valori
 plt.title("Guadagno netto dopo invenduto in base alla quantità venduta")
 plt.xlabel("Quantità venduta (0.5kg)")
 plt.ylabel("Guadagno netto dopo invenduto (euro)")
