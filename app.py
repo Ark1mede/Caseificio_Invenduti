@@ -29,3 +29,8 @@ plt.xlabel("Percentuale invenduto (%)")
 plt.ylabel("Guadagno netto (€)")
 st.pyplot(plt)
 
+# Bottone per calcolare il BEP (Break Even Point)
+if st.button("BEP"):
+    # Calcola il guadagno netto = 0
+    percentuale_bep = (costi_fissi / (prezzo_vendita * quantita_venduta)) * 100
+    st.write(f"Percentuale invenduto per BEP: {percentuale_bep:.2f}%")
