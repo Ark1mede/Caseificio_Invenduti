@@ -11,7 +11,7 @@ with col1:
     costo_consegna = st.slider("Costo di consegna (€)", 0.0, 10.0, 5.0, step=0.5 )
 with col2:
     prezzo_vendita = st.slider("Prezzo di vendita (€/0.5kg)", 10.0, 20.0, 13.0, step=0.5)  # Prezzo per 0.5 kg
-    quantita_venduta = st.slider("Quantità venduta per consegna (0.5kg)", 1.0, 20.0, 6.0, step=0.5)  # Quantità in 0.5 kg
+    quantita_venduta = st.slider("Quantità venduta per consegna (0.5kg)", 0.5, 10.0, 6.0, step=0.5)  # Quantità in 0.5 kg
 
 numero_consegne = st.slider("Numero di consegne", 1, 20, 10)
 percentuale_invenduto = st.slider("Percentuale di invenduto (%)", 0, 100, 10)
@@ -53,7 +53,7 @@ guadagni_dopo_invenduto += [-10 * i for i in range(1, 11)]  # Aggiungi 10 valori
 
 # Crea il grafico
 plt.figure(figsize=(10, 5))
-plt.plot(quantita_range, guadagni_dopo_invenduto[:40], marker='o')  # Usa solo i primi 40 valori
+plt.plot(quantita_range, guadagni_dopo_invenduto[:20], marker='o')  # Usa solo i primi 40 valori
 plt.title("Guadagno netto dopo invenduto in base alla quantità venduta")
 plt.xlabel("Quantità venduta (0.5kg)")
 plt.ylabel("Guadagno netto dopo invenduto (euro)")
